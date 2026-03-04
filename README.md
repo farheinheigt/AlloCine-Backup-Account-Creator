@@ -17,7 +17,7 @@ Le projet original (dernière mise à jour en 2020) fonctionne toujours, mais pr
 ### Modifications apportées
 
 - **Nettoyage des titres** : suppression automatique des préfixes `poster de/du/d'`
-- **Nouveau format `--format clean`** : CSV standard avec séparateur `,`, point décimal, headers `title,rating` — compatible avec des outils comme [mesfilms](https://github.com/farheinheigt/mesfilms)
+- **Nouveau format `--format clean`** : CSV standard avec séparateur `,`, point décimal, headers `title,rating` — facilement importable dans d'autres outils
 - **Options CLI** : `--films-only`, `--series-only`, `--format` via `argparse`
 - **HTTPS** : utilisation de `https://` au lieu de `http://`
 - **User-Agent** : ajout d'un header User-Agent pour éviter les blocages
@@ -74,18 +74,6 @@ The Matrix;4,0
 title,rating
 "Inception",4.5
 "The Matrix",4.0
-```
-
-## Utilisation avec mesfilms
-
-Le format `clean` est directement compatible avec l'option `--my-ratings` de [mesfilms](https://github.com/farheinheigt/mesfilms) :
-
-```bash
-# 1. Exporter ses notes
-python Allocine_Backup_Account_Creator.py https://www.allocine.fr/membre-XXXXX/ --format clean --films-only
-
-# 2. Utiliser dans mesfilms
-mesfilms /Volumes/MonDisque/Films --my-ratings notes_films.csv
 ```
 
 ## Notes
