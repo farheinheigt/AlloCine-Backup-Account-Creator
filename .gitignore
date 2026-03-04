@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+liste_notes_*.csv
+notes_*.csv
+mes_notes_allocine.csv
